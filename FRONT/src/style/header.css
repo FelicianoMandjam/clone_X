@@ -1,6 +1,3 @@
-/* src/style/header.css */
-
-/* Navbar */
 .navbar {
   background-color: #000000;
 }
@@ -22,4 +19,13 @@
 
 .navbar .btn:hover {
   background-color: #e0e0e0;
+}
+
+/* Barre de recherche */
+.form-inline .form-control {
+  width: 300px;
+}
+
+.form-inline .btn {
+  margin-left: 10px;
 }
