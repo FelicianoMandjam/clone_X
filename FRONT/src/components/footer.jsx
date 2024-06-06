@@ -15,6 +15,9 @@ const Footer = () => {
 
   return (
     <footer className={`footer ${showFooter ? 'visible' : ''}`}>
+      <div className={`footer-text ${showFooter ? 'visible' : ''}`}>
+        Ne manquez rien de ce qui se passe
+      </div>
       <div className="footer-content">
         <Link to="/login" className={`btn btn-primary ${showFooter ? 'visible' : ''}`}>Connexion</Link>
         <Link to="/register" className={`btn btn-primary ${showFooter ? 'visible' : ''}`}>S'inscrire</Link>
