@@ -1,0 +1,37 @@
+body {
+    background-color: #000000;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #ffffff;
+  }
+  
+  .register-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .register-container h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .register-container button {
+    background-color: #1da1f2;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  
+  .register-container button:hover {
+    background-color: #0d95e8;
+  }
+  
+  .google-login-button {
+    margin-top: 20px;
+  }
+  

@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../style/home.css';
-import logo from '../../assets/logo.jpg'; // Assurez-vous que le chemin est correct
+import logo from '../../assets/logo.jpg';
 
 const Home = () => {
   return (
@@ -13,12 +13,12 @@ const Home = () => {
       <div className="home-content">
         <div className="home-tweets">
           <div className="tweet">
-            <p>C'est comment les gars ?</p>
-            <p>@Feliciano</p>
+            <p>Vite fait tu connais</p>
+            <p>@Julien</p>
           </div>
           <div className="tweet">
             <p>Yahn envoie ton casque</p>
-            <p>@Julien</p>
+            <p>@Feliciano</p>
           </div>
           <div className="tweet">
             <p>Francis il est dans le métro</p>
