@@ -1,0 +1,26 @@
+/* src/style/header.css */
+
+/* Navbar */
+.navbar {
+    background-color: #000000; /* Fond noir */
+  }
+  
+  .navbar-brand,
+  .nav-link {
+    color: #ffffff !important; /* Texte en blanc */
+  }
+  
+  .nav-link:hover {
+    color: #1da1f2 !important; /* Texte bleu au survol */
+  }
+  
+  .navbar .btn {
+    background-color: #ffffff; /* Boutons blancs */
+    color: #000000; /* Texte noir */
+    border: none;
+  }
+  
+  .navbar .btn:hover {
+    background-color: #e0e0e0; /* Fond légèrement plus foncé au survol */
+  }
+  

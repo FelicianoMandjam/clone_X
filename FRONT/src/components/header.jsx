@@ -1,15 +1,13 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown'; 
-
+import Button from 'react-bootstrap/Button';
+import '../style/header.css';
 
 const Header = () => {
   return (
-    <>
-     <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="navbar">
       <Container>
         <Navbar.Brand href="/">Logo</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -22,8 +20,7 @@ const Header = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-    </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
