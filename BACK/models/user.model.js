@@ -36,7 +36,7 @@ export default (connection, DataTypes) => {
             type: DataTypes.STRING
         },
         allowMessages: {
-            type: DataTypes.BOOL,
+            type: DataTypes.BOOLEAN,
             defaultValue : true
         },
         verifiedAt : {
