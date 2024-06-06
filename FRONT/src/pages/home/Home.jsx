@@ -1,11 +1,13 @@
 import React from 'react';
 import '../../style/home.css';
+import logo from '../../assets/logo.jpg'; // Assurez-vous que le chemin est correct
 
 const Home = () => {
   return (
     <div className="home">
       <div className="home-header">
-        <h1>BIenvenue sur Project X</h1>
+        <img src={logo} alt="Logo" className="home-logo" />
+        <h1>Bienvenue sur Project X</h1>
         <p>Connectez-vous avec vos amis et le monde qui vous entoure sur Project X.</p>
       </div>
       <div className="home-content">
