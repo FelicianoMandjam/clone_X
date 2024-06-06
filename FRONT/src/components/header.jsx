@@ -28,8 +28,8 @@ const Header = () => {
           </Nav>
          
           <Nav className="ml-auto">
-            <Nav.Link href="/login">Connexion</Nav.Link>
-            <Nav.Link href="/register">S'inscrire</Nav.Link>
+            {/* <Nav.Link href="/login">Connexion</Nav.Link>
+            <Nav.Link href="/register">S'inscrire</Nav.Link> */}
             <Form inline>
             <FormControl type="text" placeholder="Rechercher" className="mr-sm-2" />
             {/* <Button variant="outline-light">Rechercher</Button> */}
