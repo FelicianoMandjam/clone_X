@@ -1,4 +1,4 @@
-import { Sequelize } from "sequelize";
+import {Sequelize } from "sequelize"
 import { ENV } from "./env.js";
 import userModel from "../models/user.model.js";
 
