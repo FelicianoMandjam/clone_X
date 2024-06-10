@@ -4,19 +4,17 @@ export default (connection, DataTypes) => {
     {
         userId: {
             type: Sequelize.INTEGER,
-            references: 'users',
-            referencesKey: 'id',
             allowNull: false
         },
         content: {
             type: DataTypes.STRING,
             allowNull: false,
         },
+        media:{
+            type: DataTypes.STRING,
+        },
         likeId: {
             type: Sequelize.INTEGER,
-            references: 'likes',
-            referencesKey: 'id',
-            allowNull: false
         },
     },
     {
