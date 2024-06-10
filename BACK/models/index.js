@@ -1,6 +1,6 @@
-import connection from "../config/db.js";
 import {Sequelize} from "sequelize";
-import  userModel  from "./user.model.js"
+import connection from "../config/db.js";
+import userModel from "./user.model.js"
 
 try {
     await connection.authenticate();
@@ -13,7 +13,7 @@ try {
   
   const { User } = connection.models;
   
-  await connection.sync({ alter: true, force: false }); 
+  await connection.sync({ alter: false, force: false }); 
   console.log("Synchro Ok ");
   
   export { User };
