@@ -1,6 +1,9 @@
 import express from "express";
 import "./models/index.js"
 import userRouter from "./routes/user.route.js"
+import cookieParser from 'cookie-parser'
+import cors from 'cors';
+
 
 //routes
 
@@ -9,11 +12,9 @@ const app = express();
 
 // MIDDLEWARES
 app.use(express.json());
+app.use(cors())
+app.use(cookieParser())
 
-// app.use((req, res, next) =>{
-//     res.status(200).json({status : 200});
-//     next()
-// })
 
 // URLS API PREFIX
 app.use("/api/user", userRouter);
