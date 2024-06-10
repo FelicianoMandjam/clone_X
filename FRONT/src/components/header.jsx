@@ -1,27 +1,25 @@
-import React from 'react';
-import Navbar from 'react-bootstrap/Navbar';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Button from 'react-bootstrap/Button';
-import '../style/header.css';
+import Nav from "react-bootstrap/Nav";
+import logo from "../assets/logo.jpg";
+import Button from "react-bootstrap/Button";
 
 const Header = () => {
   return (
-    <Navbar expand="lg" className="navbar">
-      <Container>
-        <Navbar.Brand href="/">Logo</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/login">Connexion</Nav.Link>
-            <Nav.Link href="/register">S'inscrire</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <div className="sideBar position-fixed">
+    <Nav defaultActiveKey="/" className="flex-column">
+      <Nav.Link href="/">
+        {" "}
+        <img src={logo} alt="" width={50} height={50} />{" "}
+      </Nav.Link>
+
+      <Nav.Link href="#" eventKey="disabled" className="text-white">
+        <Button id="btn_params"  className="bg-dark text-white" variant="dark" size="lg">
+          Paramètres
+        </Button>
+      </Nav.Link>
+    </Nav>
+      
+    </div>
   );
 };
 
-
-export default Header
+export default Header;
