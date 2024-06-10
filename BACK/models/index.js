@@ -13,7 +13,7 @@ try {
   
   const { User } = connection.models;
   
-  await connection.sync({ alter: true, force: false }); 
+  await connection.sync({ alter: false, force: false }); 
   console.log("Synchro Ok ");
   
   export { User };
