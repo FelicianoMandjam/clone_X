@@ -1,32 +1,50 @@
-const mongoose = require('mongoose');
-const bcrypt = require('bcryptjs');
-
-const userSchema = new mongoose.Schema({
-  username: {
-    type: String,
-    required: true,
-    unique: true,
-  },
-  email: {
-    type: String,
-    required: true,
-    unique: true,
-  },
-  password: {
-    type: String,
-    required: true,
-  },
-}, { timestamps: true });
-
-userSchema.pre('save', async function (next) {
-  if (!this.isModified('password')) {
-    return next();
-  }
-  const salt = await bcrypt.genSalt(10);
-  this.password = await bcrypt.hash(this.password, salt);
-  next();
-});
-
-const User = mongoose.model('User', userSchema);
-
-module.exports = User;
+export default (connection, DataTypes) => {
+    connection.define(
+    "User",
+    {
+        username: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            unique : true,
+        },
+        lastName: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        firstName: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        email: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            unique: true,
+        },
+        password: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        profilePicture : {
+            type: DataTypes.STRING,
+            defaultValue : "PathToDefaultPicture"
+        },
+        bannerPicture : {
+            type : DataTypes.STRING,
+            defaultValue : "PathToDefaultBanner"
+        },
+        bio : {
+            type: DataTypes.STRING
+        },
+        allowMessages: {
+            type: DataTypes.BOOLEAN,
+            defaultValue : true
+        },
+        verifiedAt : {
+            type: DataTypes.DATE
+        }
+    },
+        {
+            timestamp: true,
+        }
+    );
+};

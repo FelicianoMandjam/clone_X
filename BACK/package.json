@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Project Commun ",
   "main": "index.js",
-  "types": "modules",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +17,7 @@
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.10.0",
+    "nodemon": "^3.1.3",
     "sequelize": "^6.37.3",
     "socket.io-client": "^4.7.5"
   }
