@@ -3,7 +3,7 @@ export default (connection, DataTypes) => {
     "Tweet",
     {
         userId: {
-            type: Sequelize.INTEGER,
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         content: {
@@ -14,7 +14,7 @@ export default (connection, DataTypes) => {
             type: DataTypes.STRING,
         },
         likeId: {
-            type: Sequelize.INTEGER,
+            type: DataTypes.INTEGER,
         },
     },
     {

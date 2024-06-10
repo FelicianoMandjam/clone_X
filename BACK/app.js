@@ -1,6 +1,7 @@
 import express from "express";
-import "./models/index.js"
-import userRouter from "./routes/user.route.js"
+import "./models/index.js";
+import userRouter from "./routes/user.route.js";
+import tweetRouter from "./routes/tweet.route.js";
 
 //routes
 
@@ -17,7 +18,7 @@ app.use(express.json());
 
 // URLS API PREFIX
 app.use("/api/user", userRouter);
-// app.use("/api/tweet",);
+app.use("/api/tweet", tweetRouter);
 // app.use("/api/like",);
 // app.use("/api/messages",);
 // app.use("/api/reset",);
