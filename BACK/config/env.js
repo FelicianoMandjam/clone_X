@@ -3,6 +3,7 @@ import dotenv from "dotenv"
 dotenv.config(); 
 
 export const ENV = {
+  TOKEN:process.env.TOKEN,
   PORT: process.env.PORT,
   DB_HOST: process.env.HOST,
   DB_NAME: process.env.DBNAME,
