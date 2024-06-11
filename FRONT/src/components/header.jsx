@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 
 const Header = () => {
   return (
-    <div className="sideBar position-fixed">
+    <div className="sideBar position-fixed h-100 w-25">
     <Nav defaultActiveKey="/" className="flex-column">
       <Nav.Link href="/">
         {" "}

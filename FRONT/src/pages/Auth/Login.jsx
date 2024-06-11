@@ -9,7 +9,7 @@ const Login = () => {
   // Traitement du login
   return (
     <>
-
+      <h1>Page acceuile </h1>
    </>
   )
 }
