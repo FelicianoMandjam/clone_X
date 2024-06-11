@@ -4,7 +4,7 @@ import * as userController from '../controllers/user.controller.js';
 const router = express.Router()
 
 router.get('/sign', userController.login)
-router.post("/add", userController.register)
+router.post("/register", userController.register)
 router.put("/put", userController.put)
 // router.delete("/delete", userController.delet)
 

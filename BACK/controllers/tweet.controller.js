@@ -1,5 +1,7 @@
 import { Tweet } from '../models/index.js'
 import { ENV } from "../config/env.js";
+import { verifieToken } from "../authentication/auth.js"
+import jwt from "jsonwebtoken"
 
 const tweetsDummy = [
     {
@@ -35,6 +37,7 @@ const tweetsDummy = [
 export const add = async (req , res , next) => {
     try {
       await Tweet.create({
+        userId: jwt.decode(req.cookies.access_token).id,
         ...req.body,
       });
       res.status(200).json("Tweet has been sent!");

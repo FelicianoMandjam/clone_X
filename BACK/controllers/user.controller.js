@@ -92,17 +92,14 @@ const dummyUsers = [
     export const register = async (req , res , next) => {
       try {
         const hashedPassword = await bcrypt.hash(req.body.password, 10);
-       
         await User.create({
           ...req.body,
           password: hashedPassword,
         });
-
         res.status(201).json("User has been created!");
-        
       } catch (e) {
         console.log(e);
-        next(error);
+        next(e.message);
       }
     }
 

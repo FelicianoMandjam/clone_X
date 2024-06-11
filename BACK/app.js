@@ -2,6 +2,7 @@ import express from "express";
 import "./models/index.js";
 import userRouter from "./routes/user.route.js";
 import tweetRouter from "./routes/tweet.route.js";
+import cookieParser from "cookie-parser"
 
 //routes
 
@@ -10,6 +11,7 @@ const app = express();
 
 // MIDDLEWARES
 app.use(express.json());
+app.use(cookieParser())
 
 // app.use((req, res, next) =>{
 //     res.status(200).json({status : 200});

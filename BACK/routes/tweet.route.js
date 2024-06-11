@@ -3,8 +3,8 @@ import * as tweetController from "../controllers/tweet.controller.js";
 
 const router = express.Router();
 
+router.post("/", tweetController.add)
 // router.get('/', userController.fetch)
-router.post("/add", tweetController.add)
 // router.put("/put", userController.put)
 // router.delete("/delete", userController.delet)
 
