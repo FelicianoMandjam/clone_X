@@ -12,7 +12,7 @@ const connection = new Sequelize(
     //  pour MAC --------------------
     dialectOptions: {
       socketPath: "/Applications/MAMP/tmp/mysql/mysql.sock",
-    },
+    }
   }
 );
 

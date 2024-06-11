@@ -2,10 +2,10 @@ export default (connection, DataTypes) => {
     connection.define(
     "Medias",
     {
-        userId: {
-            type: DataTypes.INTEGER,
-            allowNull: false
-        },
+        // userId: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false
+        // },
         tweetId: {
             type: DataTypes.STRING,
         },
@@ -14,9 +14,9 @@ export default (connection, DataTypes) => {
             type: DataTypes.STRING,
         },
 
-        answer_tweetId: {
-            type: DataTypes.INTEGER,
-        },
+        // answer_tweetId: {
+        //     type: DataTypes.INTEGER,
+        // },
     },
     {
         timestamp: true,

@@ -52,7 +52,7 @@ export const register = async (req, res, next) => {
     res.status(201).json("User has been created!");
   } catch (e) {
     console.log(e);
-    next(error);
+    next(e);
   }
 };
 
@@ -88,6 +88,7 @@ export const updateById = async (req, res) => {
     // Je récupère l'utilisateur avec son id (findByPk)
     const user = await User.findByPk(req.params.id);
 
+    // Puis je met à jour cet utilisateur avec update
     await user.update(req.body);
     if (!user) return res.status(404).json("User not found !");
     res.status(200).json({

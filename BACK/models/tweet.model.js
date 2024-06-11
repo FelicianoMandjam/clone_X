@@ -13,9 +13,6 @@ export default (connection, DataTypes) => {
         media:{
             type: DataTypes.STRING,
         },
-        likeId: {
-            type: DataTypes.INTEGER,
-        },
     },
     {
         timestamp: true,

@@ -18,8 +18,11 @@ try {
   const { User , Tweet  } = connection.models;
 
   // User / Tweet 
-  User.hasMany(Tweet, {as: "tweet"})
-  Tweet.belongsTo(User)
+  // User.hasMany(Tweet, {foreignKey: "tweet_fk"})
+  // Tweet.belongsTo(User)
+
+  // Tweet.hasOne(User , {foreignKey : "user_fr"})
+  // User.belongsTo(Tweet)
 
   //  Tweet / Medias
 
@@ -28,7 +31,7 @@ try {
 
   // A continuer_________________________________________
   
-  await connection.sync({ alter: false, force: true }); 
+  await connection.sync({  force: false }); 
   console.log("Synchro Ok ");
   
   export { User , Tweet  };
