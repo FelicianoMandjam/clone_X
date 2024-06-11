@@ -3,7 +3,7 @@ export default (connection, DataTypes) => {
     "Tweet",
     {
         userId: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         content: {
