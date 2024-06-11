@@ -1,6 +1,8 @@
 import connection from "../config/db.js";
 import {Sequelize} from "sequelize";
 import  userModel  from "./user.model.js"
+import tweetModel from "./tweet.model.js";
+// import mediasModel from "./medias.model.js";
 
 try {
     await connection.authenticate();
@@ -10,11 +12,26 @@ try {
   }
   
   userModel(connection, Sequelize);
+  tweetModel(connection , Sequelize);
+  // mediasModel(connection , Sequelize);
   
-  const { User } = connection.models;
+  const { User , Tweet  } = connection.models;
+
+  // User / Tweet 
+  // User.hasMany(Tweet, {foreignKey: "tweet_fk"})
+  // Tweet.belongsTo(User)
+
+  // Tweet.hasOne(User , {foreignKey : "user_fr"})
+  // User.belongsTo(Tweet)
+
+  //  Tweet / Medias
+
+  // Tweet.hasMany(Medias,{ as: "medias"})
+  // Medias.belongsTo(Tweet)
+
+  // A continuer_________________________________________
   
-  await connection.sync({ alter: true, force: false }); 
+  await connection.sync({  force: false }); 
   console.log("Synchro Ok ");
   
-  export { User };
-  
+  export { User , Tweet  };

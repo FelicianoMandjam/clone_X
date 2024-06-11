@@ -1,10 +1,12 @@
 import React from 'react';
+import Login from '../Auth/Login';
 import '../../style/home.css';
 
 const Home = () => {
   return (
     <div className="home">
       <div className="home-header">
+
         <h1>BIenvenue sur Project X</h1>
         <p>Connectez-vous avec vos amis et le monde qui vous entoure sur Project X.</p>
       </div>
@@ -22,6 +24,7 @@ const Home = () => {
             <p>Francis il est dans le métro</p>
             <p>@Ghani</p>
           </div>
+         
         </div>
       </div>
     </div>
