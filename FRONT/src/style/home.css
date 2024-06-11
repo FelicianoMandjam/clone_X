@@ -1,11 +1,34 @@
 /* src/style/home.css */
-
-body {
-  background-color: #000000; /* Fond noir */
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #ffffff;
+/* Assurez-vous que la hauteur de l'élément body et html est de 100% */
+html, body {
+ 
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
 }
 
+/* Conteneur principal doit occuper tout l'espace sauf celui réservé pour le footer */
+.content {
+  height: 100vh;
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+}
+
+/* Styles pour le footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px; /* Ajustez cette valeur à la hauteur souhaitée */
+  background-color: #007bff; /* Couleur de fond du footer */
+  z-index: 1000; /* Assurez-vous que le footer est au-dessus des autres éléments */
+}
 .home {
   padding: 20px;
 }
