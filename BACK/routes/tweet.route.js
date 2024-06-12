@@ -5,6 +5,7 @@ const router = express.Router();
 
 router.post("/", tweetController.add)
 router.get('/', tweetController.findAll)
+router.get('/:id', tweetController.findOne)
 // router.put("/put", userController.put)
 // router.delete("/delete", userController.delet)
 

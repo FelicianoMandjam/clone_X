@@ -56,3 +56,13 @@ export const findAll = async (req, res, next) => {
     console.log(e.message);
   }
 }
+
+export const findOne = async (req, res, next) => {
+  try{
+    const tweets = await Tweet.findAll({where: {userId: req.params.id}});
+    res.status(200).json(tweets);
+  }
+  catch(e){
+    console.log(e.message);
+  }
+}
