@@ -46,3 +46,13 @@ export const add = async (req , res , next) => {
       next(e.message);
     }
   }
+
+export const findAll = async (req, res, next) => {
+  try{
+    const tweets = await Tweet.findAll();
+    res.status(200).json(tweets)
+  }
+  catch(e){
+    console.log(e.message);
+  }
+}
