@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
+// src/pages/Auth/Login.jsx
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 import '../../style/login.css';
+import { AuthContext } from '../../context/AuthContext.jsx';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const { login } = useContext(AuthContext);
 
   const handleGoogleSuccess = (response) => {
     console.log('Google login success:', response);
-    
+    // Handle the Google login success, e.g., by verifying the token and logging in the user
   };
 
   const handleGoogleFailure = (error) => {
@@ -19,9 +22,8 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  
     if (email === 'user@example.com' && password === 'password') {
-    
+      login({ email });
       console.log('Connexion réussie');
     } else {
       setError('Adresse e-mail ou mot de passe incorrect');
