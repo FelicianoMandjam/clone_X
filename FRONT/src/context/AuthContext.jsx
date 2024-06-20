@@ -1,6 +1,7 @@
 import React, { createContext, useState, useEffect } from "react";
 import { URL } from "../src/URL/URL.js";
 import axios from "axios";
+import { redirectDocument } from 'react-router-dom'
 
 // Créez un contexte d'authentification
 export const AuthContext = createContext();
@@ -46,31 +47,11 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     console.log("Entrée dans logout()");
     localStorage.removeItem("user");
+    redirectDocument("/");
   };
 
-  // const recupTweet = async (dataForm) => {
-  //   console.log("Entree dans login");
-  //   console.log(dataForm);
-
-  //   // API
-  //   setIsLoading(true);
-  //   try {
-  //     console.log("Entree dans le try de AuthContext");
-  //     const { data, status } = await axios.get(URL.USER_TWEET, dataForm, {
-  //       withCredentials: true,
-  //     });
-  //     console.log(data);
-  //     if (status === 200) {
-  //       console.log("Le tweet est la ")
-  //     }
-  //   } catch (e) {
-  //     console.log(e);
-  //     setIsLoading(false);
-  //   }
-  // }
-
   return (
-    <AuthContext.Provider value={{ logout, login, user, isLoading  }}>
+    <AuthContext.Provider value={{ logout, login, user, isLoading }}>
       {children}
     </AuthContext.Provider>
   );

@@ -1,8 +1,8 @@
 import Nav from "react-bootstrap/Nav";
-import logo from "../assets/logo.jpg";
+import logo from "../../assets/logo.jpg";
 import Button from "react-bootstrap/Button";
 
-const Header = () => {
+const SideBar = () => {
   return (
     <div className="sideBar position-fixed h-100 w-25">
     <Nav defaultActiveKey="/" className="flex-column">
@@ -22,4 +22,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default SideBar;
